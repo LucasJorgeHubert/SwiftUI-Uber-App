@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct MarvelUIApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject var locationViewModel = LocationSearchViewModel()
 
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(locationViewModel)
         }
     }
 }
