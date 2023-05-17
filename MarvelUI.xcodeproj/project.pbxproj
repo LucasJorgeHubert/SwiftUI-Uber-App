@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C9CFFE442A15179E00708A15 /* MarvelUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE432A15179E00708A15 /* MarvelUIApp.swift */; };
-		C9CFFE462A15179E00708A15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE452A15179E00708A15 /* ContentView.swift */; };
 		C9CFFE482A1517A200708A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CFFE472A1517A200708A15 /* Assets.xcassets */; };
 		C9CFFE4B2A1517A200708A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CFFE4A2A1517A200708A15 /* Preview Assets.xcassets */; };
 		C9CFFE4D2A1517A200708A15 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE4C2A1517A200708A15 /* Persistence.swift */; };
@@ -16,6 +15,9 @@
 		C9CFFE5B2A1517A200708A15 /* MarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE5A2A1517A200708A15 /* MarvelUITests.swift */; };
 		C9CFFE652A1517A300708A15 /* MarvelUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE642A1517A300708A15 /* MarvelUIUITests.swift */; };
 		C9CFFE672A1517A300708A15 /* MarvelUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE662A1517A300708A15 /* MarvelUIUITestsLaunchTests.swift */; };
+		C9CFFE7D2A151D2400708A15 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE7C2A151D2400708A15 /* HomeView.swift */; };
+		C9CFFE7F2A151D9000708A15 /* UberMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE7E2A151D9000708A15 /* UberMapViewRepresentable.swift */; };
+		C9CFFE812A151F7400708A15 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE802A151F7400708A15 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 /* Begin PBXFileReference section */
 		C9CFFE402A15179E00708A15 /* MarvelUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CFFE432A15179E00708A15 /* MarvelUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUIApp.swift; sourceTree = "<group>"; };
-		C9CFFE452A15179E00708A15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9CFFE472A1517A200708A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9CFFE4A2A1517A200708A15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9CFFE4C2A1517A200708A15 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		C9CFFE602A1517A300708A15 /* MarvelUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CFFE642A1517A300708A15 /* MarvelUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUIUITests.swift; sourceTree = "<group>"; };
 		C9CFFE662A1517A300708A15 /* MarvelUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9CFFE7C2A151D2400708A15 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C9CFFE7E2A151D9000708A15 /* UberMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRepresentable.swift; sourceTree = "<group>"; };
+		C9CFFE802A151F7400708A15 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,11 @@
 		C9CFFE422A15179E00708A15 /* MarvelUI */ = {
 			isa = PBXGroup;
 			children = (
-				C9CFFE432A15179E00708A15 /* MarvelUIApp.swift */,
-				C9CFFE452A15179E00708A15 /* ContentView.swift */,
+				C9CFFE792A151CB800708A15 /* App */,
+				C9CFFE782A151CB700708A15 /* Core */,
+				C9CFFE772A151CB500708A15 /* Extensions */,
+				C9CFFE742A151CAC00708A15 /* Models */,
+				C9CFFE732A151C9500708A15 /* Managers */,
 				C9CFFE472A1517A200708A15 /* Assets.xcassets */,
 				C9CFFE4C2A1517A200708A15 /* Persistence.swift */,
 				C9CFFE512A1517A200708A15 /* Info.plist */,
@@ -133,6 +140,61 @@
 				C9CFFE662A1517A300708A15 /* MarvelUIUITestsLaunchTests.swift */,
 			);
 			path = MarvelUIUITests;
+			sourceTree = "<group>";
+		};
+		C9CFFE732A151C9500708A15 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C9CFFE802A151F7400708A15 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C9CFFE742A151CAC00708A15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9CFFE772A151CB500708A15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C9CFFE782A151CB700708A15 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C9CFFE7B2A151D0C00708A15 /* View */,
+				C9CFFE7A2A151D0400708A15 /* ViewModel */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C9CFFE792A151CB800708A15 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C9CFFE432A15179E00708A15 /* MarvelUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C9CFFE7A2A151D0400708A15 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9CFFE7B2A151D0C00708A15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9CFFE7C2A151D2400708A15 /* HomeView.swift */,
+				C9CFFE7E2A151D9000708A15 /* UberMapViewRepresentable.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9CFFE4D2A1517A200708A15 /* Persistence.swift in Sources */,
-				C9CFFE462A15179E00708A15 /* ContentView.swift in Sources */,
+				C9CFFE7D2A151D2400708A15 /* HomeView.swift in Sources */,
+				C9CFFE812A151F7400708A15 /* LocationManager.swift in Sources */,
 				C9CFFE502A1517A200708A15 /* MarvelUI.xcdatamodeld in Sources */,
 				C9CFFE442A15179E00708A15 /* MarvelUIApp.swift in Sources */,
+				C9CFFE7F2A151D9000708A15 /* UberMapViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +494,8 @@
 				DEVELOPMENT_TEAM = 76WUJ9PUX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelUI/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please, we need your permission o provide our services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +525,8 @@
 				DEVELOPMENT_TEAM = 76WUJ9PUX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelUI/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please, we need your permission o provide our services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
