@@ -13,7 +13,6 @@ struct LocationSeachView: View {
     
     var body: some View {
         VStack {
-            // Header View
             HStack {
                 VStack {
                     Circle()
@@ -58,11 +57,9 @@ struct LocationSeachView: View {
                     }
                 }
             }
-            
-            
-            
-            // List View
         }
+        .background(.white)
+        .opacity(0.9)
     }
 }
 
