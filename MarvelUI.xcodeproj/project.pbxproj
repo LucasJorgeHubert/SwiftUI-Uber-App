@@ -22,6 +22,7 @@
 		C9CFFE892A153FA800708A15 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE882A153FA800708A15 /* MapViewActionButton.swift */; };
 		C9CFFE8B2A15410900708A15 /* LocationSeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE8A2A15410900708A15 /* LocationSeachView.swift */; };
 		C9CFFE8D2A15447800708A15 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE8C2A15447800708A15 /* LocationSearchResultCell.swift */; };
+		C9CFFE8F2A154F1900708A15 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE8E2A154F1900708A15 /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C9CFFE882A153FA800708A15 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		C9CFFE8A2A15410900708A15 /* LocationSeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSeachView.swift; sourceTree = "<group>"; };
 		C9CFFE8C2A15447800708A15 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		C9CFFE8E2A154F1900708A15 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 		C9CFFE852A153D5200708A15 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C9CFFE8E2A154F1900708A15 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				C9CFFE7D2A151D2400708A15 /* HomeView.swift in Sources */,
 				C9CFFE812A151F7400708A15 /* LocationManager.swift in Sources */,
 				C9CFFE502A1517A200708A15 /* MarvelUI.xcdatamodeld in Sources */,
+				C9CFFE8F2A154F1900708A15 /* LocationSearchViewModel.swift in Sources */,
 				C9CFFE8D2A15447800708A15 /* LocationSearchResultCell.swift in Sources */,
 				C9CFFE442A15179E00708A15 /* MarvelUIApp.swift in Sources */,
 				C9CFFE7F2A151D9000708A15 /* UberMapViewRepresentable.swift in Sources */,

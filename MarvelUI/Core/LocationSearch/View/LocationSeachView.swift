@@ -10,6 +10,7 @@ import SwiftUI
 struct LocationSeachView: View {
     @State private var startLocationText = ""
     @State private var destinationLocationText = ""
+    @StateObject var viewModel = LocationServiceViewModel()
     
     var body: some View {
         VStack {
@@ -37,7 +38,7 @@ struct LocationSeachView: View {
                     .padding(.trailing)
                     
                     TextField("Where to?", text:
-                        $startLocationText
+                                $viewModel.queryFragment
                     )
                     .frame(height: 32)
                     .background(Color(.systemGray4))
