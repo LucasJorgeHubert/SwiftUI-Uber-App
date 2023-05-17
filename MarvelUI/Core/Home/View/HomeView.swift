@@ -20,7 +20,9 @@ struct HomeView: View {
                 LocationSearchActivationView()
                     .padding(.vertical, 72)
                     .onTapGesture {
-                        showLocationSearchView.toggle()
+                        withAnimation(.spring()) {
+                            showLocationSearchView.toggle()
+                        }
                     }
             }
             
