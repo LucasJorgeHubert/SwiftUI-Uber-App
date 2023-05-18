@@ -17,15 +17,17 @@ struct LocationSearchView: View {
             HStack {
                 VStack {
                     Circle()
-                        .fill(Color(.systemGray3))
+                        .fill(Color(.systemYellow))
                         .frame(width: 6, height: 6)
+                        .opacity(0.8)
                     
                     Rectangle()
-                        .fill(Color(.systemGray3))
+                        .fill(Color(.systemYellow))
                         .frame(width: 1, height: 24)
+                        .opacity(0.6)
                     
                     Rectangle()
-                        .fill(Color.black)
+                        .fill(Color(.systemYellow))
                         .frame(width: 6, height: 6)
                 }
                 
