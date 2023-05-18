@@ -22,7 +22,7 @@ struct MapViewActionButton: View {
                 : "line.3.horizontal"
             )
                 .font(.title2)
-                .foregroundColor(.black)
+                .foregroundColor(Color.yellow)
                 .padding()
                 .background(.white)
                 .clipShape(Circle())

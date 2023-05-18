@@ -11,7 +11,7 @@ struct LocationSearchActivationView: View {
     var body: some View {
         HStack {
             Rectangle()
-                .fill(Color.black)
+                .fill(Color(.systemYellow))
                 .frame(width: 8, height: 8)
                 .padding(.horizontal)
             
@@ -24,7 +24,7 @@ struct LocationSearchActivationView: View {
         .background(
             Rectangle()
                 .fill(Color.white)
-                .shadow(color: .black, radius: 6)
+                .shadow(color: Color(.systemYellow), radius: 6)
         )
     }
 }
