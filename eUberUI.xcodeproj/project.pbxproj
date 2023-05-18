@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C97221BD2A169FD40014EABA /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97221BC2A169FD40014EABA /* MapViewState.swift */; };
 		C9CFFE442A15179E00708A15 /* eUberUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE432A15179E00708A15 /* eUberUIApp.swift */; };
 		C9CFFE482A1517A200708A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CFFE472A1517A200708A15 /* Assets.xcassets */; };
 		C9CFFE4B2A1517A200708A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CFFE4A2A1517A200708A15 /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C97221BC2A169FD40014EABA /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewState.swift; path = ../../../../../../../Users/lucashubert/Downloads/MapViewState.swift; sourceTree = "<group>"; };
 		C9CFFE402A15179E00708A15 /* eUberUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eUberUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CFFE432A15179E00708A15 /* eUberUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUberUIApp.swift; sourceTree = "<group>"; };
 		C9CFFE472A1517A200708A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		C9CFFE742A151CAC00708A15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C97221BC2A169FD40014EABA /* MapViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				C9CFFE812A151F7400708A15 /* LocationManager.swift in Sources */,
 				C9CFFE502A1517A200708A15 /* eUberUI.xcdatamodeld in Sources */,
 				C9CFFE8F2A154F1900708A15 /* LocationSearchViewModel.swift in Sources */,
+				C97221BD2A169FD40014EABA /* MapViewState.swift in Sources */,
 				C9CFFE8D2A15447800708A15 /* LocationSearchResultCell.swift in Sources */,
 				C9CFFE442A15179E00708A15 /* eUberUIApp.swift in Sources */,
 				C9CFFE7F2A151D9000708A15 /* UberMapViewRepresentable.swift in Sources */,
