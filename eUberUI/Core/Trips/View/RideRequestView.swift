@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct RideRequestView: View {
+    
+    @State private var selectedRideType: RideType = .eUberX
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    
     var body: some View {
         VStack {
             Capsule()
                 .foregroundColor((Color(.systemYellow)))
                 .frame(width: 48, height: 8)
-                .opacity(0.6)
+                .opacity(0.3)
+                .padding(.vertical, 8)
             
             HStack {
                 VStack {
@@ -40,20 +45,22 @@ struct RideRequestView: View {
                         
                         Spacer()
                         
-                        Text("01:30 PM")
+                        Text(locationViewModel.pickupTime ?? "-")
                             .font(.system(size: 14, weight: .bold))
                             .foregroundColor(.gray)
                     }
                     .padding(.bottom, 10)
                     
                     HStack {
-                        Text("Destination location")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.gray)
+                        if let location = locationViewModel.selectedEUberLocation {
+                            Text(location.title)
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(.gray)
+                        }
                         
                         Spacer()
                         
-                        Text("01:40 PM")
+                        Text(locationViewModel.dropOffTime ?? "-")
                             .font(.system(size: 14, weight: .bold))
                             .foregroundColor(.gray)
                     }
@@ -77,25 +84,32 @@ struct RideRequestView: View {
             
             ScrollView(.horizontal) {
                 HStack(spacing: 12) {
-                    ForEach(0 ..< 3, id: \.self) { _ in
-                        VStack(alignment: .leading) {
-                            Image(systemName: "bolt.car.fill")
+                    ForEach(RideType.allCases, id: \.self) { rideType in
+                        VStack {
+                            Image(rideType.imageName)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 48, height: 48)
                             
-                            VStack(spacing: 4) {
-                                Text("Smart X")
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(rideType.description)
                                     .font(.system(size: 14, weight: .semibold))
                                                   
-                                Text("$ 5.80")
+                                Text(locationViewModel.computeRidePrice(forType: rideType).toCurrency())
                                     .font(.system(size: 14, weight: .semibold))
                             }
-                            .padding(8)
                         }
+                        .padding(.top, 8)
                         .frame(width: 112, height: 140)
-                        .background(Color(.systemGroupedBackground))
+                        .foregroundColor(rideType == selectedRideType ? .black : Color.theme.primaryTextColor)
+                        .background(rideType == selectedRideType ? .yellow : Color.theme.secondaryBackgroundColor)
+                        .scaleEffect(rideType == selectedRideType ? 1.1 : 1.0)
                         .cornerRadius(10)
+                        .onTapGesture {
+                            withAnimation(.linear) {
+                                selectedRideType = rideType
+                            }
+                        }
                     }
                 }
             }.padding(.horizontal)
@@ -138,7 +152,9 @@ struct RideRequestView: View {
             }
             
         }
-        .background(.white)
+        .padding(.bottom, 24)
+        .background(Color.theme.backgroundColor)
+        .cornerRadius(16)
     }
 }
 

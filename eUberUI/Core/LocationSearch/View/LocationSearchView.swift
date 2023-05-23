@@ -58,14 +58,16 @@ struct LocationSearchView: View {
                     ForEach(viewModel.resuls, id: \.self) { result in
                         LocationSearchResultCell(title: result.title, subtitle: result.subtitle)
                             .onTapGesture {
-                                mapState = .locationSelected
-                                viewModel.selectLocation(result)
+                                withAnimation {
+                                    mapState = .locationSelected
+                                    viewModel.selectLocation(result)
+                                }
                             }
                     }
                 }
             }
         }
-        .background(.white)
+        .background(Color.theme.backgroundColor)
         .opacity(0.9)
     }
 }
