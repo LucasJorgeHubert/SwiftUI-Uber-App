@@ -11,7 +11,7 @@ import MapKit
 class LocationSearchViewModel: NSObject, ObservableObject {
     
     @Published var resuls = [MKLocalSearchCompletion]()
-    @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
+    @Published var selectedEUberLocation: EUberLocation?
     
     private let searchCompleter = MKLocalSearchCompleter()
     
@@ -39,7 +39,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
             }
             guard let item = response?.mapItems.first else { return }
             let coordinate = item.placemark.coordinate
-            self.selectedLocationCoordinate = coordinate
+            self.selectedEUberLocation = EUberLocation(title: localSearch.title, coordinate: coordinate)
             
             print("DEBUG: Location coordinates \(coordinate)")
         }
@@ -54,7 +54,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     }
     
     func computeRidePrice(forType type: RideType) -> Double {
-        guard let destCoordinate = selectedLocationCoordinate else { return 0.0 }
+        guard let destCoordinate = selectedEUberLocation?.coordinate else { return 0.0 }
         guard let userCoordinate = self.userLocation else { return 0.0 }
         
         let userLocation = CLLocation(

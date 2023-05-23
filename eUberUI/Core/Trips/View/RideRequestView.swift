@@ -17,7 +17,7 @@ struct RideRequestView: View {
             Capsule()
                 .foregroundColor((Color(.systemYellow)))
                 .frame(width: 48, height: 8)
-                .opacity(0.6)
+                .opacity(0.3)
                 .padding(.vertical, 8)
             
             HStack {
@@ -52,9 +52,11 @@ struct RideRequestView: View {
                     .padding(.bottom, 10)
                     
                     HStack {
-                        Text("Destination location")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.gray)
+                        if let location = locationViewModel.selectedEUberLocation {
+                            Text(location.title)
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(.gray)
+                        }
                         
                         Spacer()
                         
