@@ -27,6 +27,7 @@
 		C9CFFE8B2A15410900708A15 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE8A2A15410900708A15 /* LocationSearchView.swift */; };
 		C9CFFE8D2A15447800708A15 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE8C2A15447800708A15 /* LocationSearchResultCell.swift */; };
 		C9CFFE8F2A154F1900708A15 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE8E2A154F1900708A15 /* LocationSearchViewModel.swift */; };
+		C9DD5C842A1D0B4500B357DB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD5C832A1D0B4500B357DB /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		C9CFFE8A2A15410900708A15 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		C9CFFE8C2A15447800708A15 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 		C9CFFE8E2A154F1900708A15 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		C9DD5C832A1D0B4500B357DB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = eUberUI/Core/Trips/View/Color.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C9AA5E772A1CFA5600824737 /* Double.swift */,
+				C9DD5C832A1D0B4500B357DB /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				C9AA5E762A1C113E00824737 /* RideType.swift in Sources */,
 				C9CFFE7D2A151D2400708A15 /* HomeView.swift in Sources */,
 				C9CFFE812A151F7400708A15 /* LocationManager.swift in Sources */,
+				C9DD5C842A1D0B4500B357DB /* Color.swift in Sources */,
 				C9CFFE502A1517A200708A15 /* eUberUI.xcdatamodeld in Sources */,
 				C9CFFE8F2A154F1900708A15 /* LocationSearchViewModel.swift in Sources */,
 				C9AA5E782A1CFA5600824737 /* Double.swift in Sources */,

@@ -67,7 +67,7 @@ struct LocationSearchView: View {
                 }
             }
         }
-        .background(.white)
+        .background(Color.theme.backgroundColor)
         .opacity(0.9)
     }
 }

@@ -45,7 +45,7 @@ struct RideRequestView: View {
                         
                         Spacer()
                         
-                        Text("01:30 PM")
+                        Text(locationViewModel.pickupTime ?? "-")
                             .font(.system(size: 14, weight: .bold))
                             .foregroundColor(.gray)
                     }
@@ -60,7 +60,7 @@ struct RideRequestView: View {
                         
                         Spacer()
                         
-                        Text("01:40 PM")
+                        Text(locationViewModel.dropOffTime ?? "-")
                             .font(.system(size: 14, weight: .bold))
                             .foregroundColor(.gray)
                     }
@@ -101,7 +101,8 @@ struct RideRequestView: View {
                         }
                         .padding(.top, 8)
                         .frame(width: 112, height: 140)
-                        .background(Color(rideType == selectedRideType ? .systemYellow : .systemGroupedBackground))
+                        .foregroundColor(rideType == selectedRideType ? .black : Color.theme.primaryTextColor)
+                        .background(rideType == selectedRideType ? .yellow : Color.theme.secondaryBackgroundColor)
                         .scaleEffect(rideType == selectedRideType ? 1.1 : 1.0)
                         .cornerRadius(10)
                         .onTapGesture {
@@ -152,7 +153,7 @@ struct RideRequestView: View {
             
         }
         .padding(.bottom, 24)
-        .background(.white)
+        .background(Color.theme.backgroundColor)
         .cornerRadius(16)
     }
 }
