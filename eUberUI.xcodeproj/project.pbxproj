@@ -10,6 +10,7 @@
 		C91BB1442A16BDC000C0B971 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91BB1432A16BDC000C0B971 /* RideRequestView.swift */; };
 		C97221BD2A169FD40014EABA /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97221BC2A169FD40014EABA /* MapViewState.swift */; };
 		C9AA5E762A1C113E00824737 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA5E752A1C113E00824737 /* RideType.swift */; };
+		C9AA5E782A1CFA5600824737 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA5E772A1CFA5600824737 /* Double.swift */; };
 		C9CFFE442A15179E00708A15 /* eUberUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFE432A15179E00708A15 /* eUberUIApp.swift */; };
 		C9CFFE482A1517A200708A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CFFE472A1517A200708A15 /* Assets.xcassets */; };
 		C9CFFE4B2A1517A200708A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CFFE4A2A1517A200708A15 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		C91BB1432A16BDC000C0B971 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		C97221BC2A169FD40014EABA /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewState.swift; path = ../../../../../../../Users/lucashubert/Downloads/MapViewState.swift; sourceTree = "<group>"; };
 		C9AA5E752A1C113E00824737 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RideType.swift; path = eUberUI/Core/Trips/View/RideType.swift; sourceTree = SOURCE_ROOT; };
+		C9AA5E772A1CFA5600824737 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Double.swift; path = eUberUI/Core/Trips/View/Double.swift; sourceTree = SOURCE_ROOT; };
 		C9CFFE402A15179E00708A15 /* eUberUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eUberUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CFFE432A15179E00708A15 /* eUberUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUberUIApp.swift; sourceTree = "<group>"; };
 		C9CFFE472A1517A200708A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		C9CFFE772A151CB500708A15 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C9AA5E772A1CFA5600824737 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				C9CFFE812A151F7400708A15 /* LocationManager.swift in Sources */,
 				C9CFFE502A1517A200708A15 /* eUberUI.xcdatamodeld in Sources */,
 				C9CFFE8F2A154F1900708A15 /* LocationSearchViewModel.swift in Sources */,
+				C9AA5E782A1CFA5600824737 /* Double.swift in Sources */,
 				C97221BD2A169FD40014EABA /* MapViewState.swift in Sources */,
 				C9CFFE8D2A15447800708A15 /* LocationSearchResultCell.swift in Sources */,
 				C9CFFE442A15179E00708A15 /* eUberUIApp.swift in Sources */,
