@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct RideRequestView: View {
+    
+    @State private var selectedRideType: RideType = .eUberX
+    
     var body: some View {
         VStack {
             Capsule()
                 .foregroundColor((Color(.systemYellow)))
                 .frame(width: 48, height: 8)
                 .opacity(0.6)
+                .padding(.vertical, 8)
             
             HStack {
                 VStack {
@@ -77,25 +81,31 @@ struct RideRequestView: View {
             
             ScrollView(.horizontal) {
                 HStack(spacing: 12) {
-                    ForEach(0 ..< 3, id: \.self) { _ in
-                        VStack(alignment: .leading) {
-                            Image(systemName: "bolt.car.fill")
+                    ForEach(RideType.allCases, id: \.self) { rideType in
+                        VStack {
+                            Image(rideType.imageName)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 48, height: 48)
                             
-                            VStack(spacing: 4) {
-                                Text("Smart X")
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(rideType.description)
                                     .font(.system(size: 14, weight: .semibold))
                                                   
                                 Text("$ 5.80")
                                     .font(.system(size: 14, weight: .semibold))
                             }
-                            .padding(8)
                         }
+                        .padding(.top, 8)
                         .frame(width: 112, height: 140)
-                        .background(Color(.systemGroupedBackground))
+                        .background(Color(rideType == selectedRideType ? .systemYellow : .systemGroupedBackground))
+                        .scaleEffect(rideType == selectedRideType ? 1.1 : 1.0)
                         .cornerRadius(10)
+                        .onTapGesture {
+                            withAnimation(.linear) {
+                                selectedRideType = rideType
+                            }
+                        }
                     }
                 }
             }.padding(.horizontal)
@@ -138,7 +148,9 @@ struct RideRequestView: View {
             }
             
         }
+        .padding(.bottom, 24)
         .background(.white)
+        .cornerRadius(16)
     }
 }
 
