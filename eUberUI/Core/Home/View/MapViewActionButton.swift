@@ -23,7 +23,7 @@ struct MapViewActionButton: View {
                 .font(.title2)
                 .foregroundColor(Color.yellow)
                 .padding()
-                .background(.white)
+                .background(ColorTheme().backgroundColor)
                 .clipShape(Circle())
                 .shadow(radius: 6)
         }

@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct LocationSearchView: View {
+    enum FocusField: Hashable {
+        case destinationField
+    }
+
+    @FocusState private var focusedField: FocusField?
+    
     @State private var startLocationText = ""
     @Binding var mapState: MapViewState
     @EnvironmentObject var viewModel: LocationSearchViewModel
@@ -45,6 +51,10 @@ struct LocationSearchView: View {
                     .frame(height: 32)
                     .background(Color(.systemGray4))
                     .padding(.trailing)
+                    .focused($focusedField, equals: .destinationField)
+                    .onAppear {
+                        self.focusedField = .destinationField
+                    }
                 }
             }
             .padding(.horizontal)
