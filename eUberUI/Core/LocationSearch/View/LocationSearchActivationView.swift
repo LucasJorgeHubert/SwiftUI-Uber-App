@@ -23,8 +23,8 @@ struct LocationSearchActivationView: View {
         .frame(width: UIScreen.main.bounds.width - 64, height: 50)
         .background(
             Rectangle()
-                .fill(Color.white)
-                .shadow(color: Color(.systemYellow), radius: 6)
+                .fill(ColorTheme().backgroundColor)
+                .shadow(color: Color(.darkGray), radius: 6)
         )
     }
 }
